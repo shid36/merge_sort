@@ -40,17 +40,22 @@ void merge (vector<int>&arr,int  start,int mid,int end)
         merge(arr,start,mid,end);
 
     }
-    int main(){
-        vector<int>arr = {21,234,34,2,1,0};
-        mergesort(arr,0,arr.size()-1);
-        for (int val:arr){
-            cout<< val<<" ";
+int main (){
+    int n;
+    cout <<"enter the size of the  array=";
+    cin>> n;
+    vector<int>arr(n);
+    cout<<"enter the elements of the array =";
+    for (int i = 0; i<n;i++){
+        cin>> arr[i];
 
-        }
-        cout<<endl;
-return 0;
     }
+    mergesort (arr,0,arr.size ()-1);
+    cout << "sorrted array is =";
+    for (int  val :arr){
+        cout << val<< " ";
 
-
-  
-    
+    }
+    cout << endl;
+    return 0;
+}
